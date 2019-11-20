@@ -18,6 +18,16 @@
 - print '0' if printing the formula numbers ends.
 - print the solution the formula supposing the formula is 'true' and print out 'USAT' if the formula cannot make the solution.
 
+-example
+```
+input : (or a1 a2 (and a3 (not a5)))
+1
+2
+3 -5
+0
+1 2 3 -5
+```
+
 ## How to build?
 ```
 $ make
