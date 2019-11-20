@@ -15,6 +15,9 @@
 - if the variables is connected with 'or' gate, put white space between the numbers.
 - if the variable is in 'not' gate, the number will be printed with negative number like -n (n is natural number).
 
+- print '0' if printing the formula numbers ends.
+- print the solution the formula supposing the formula is 'true' and print out 'USAT' if the formula cannot make the solution.
+
 ## How to build?
 ```
 $ make
