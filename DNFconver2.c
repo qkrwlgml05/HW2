@@ -255,10 +255,12 @@ int checkSize (char string[]){
 }
 
 node* summary(node* fir_node){
+  int be = 0;
   for (int i = 0; i < fir_node->size; i++){
     node* check = *(fir_node->list+i);
     int l = 0, o = 0, or_num = 0;
     if (fir_node->type == check->type){
+      be = 1;
       int size = fir_node->size = fir_node->size + check->size-1;
       node** input = (node**)malloc(sizeof(node*)*size);
       for(int j = 0; j < size; j++){
@@ -273,6 +275,8 @@ node* summary(node* fir_node){
       fir_node->list = input;
     }
   }
+  if (be)
+    fir_node = summary(fir_node);
   for (int i = 0; i < fir_node->size; i++)
     *(fir_node->list+i) = summary (*(fir_node->list+i));
   return fir_node;
