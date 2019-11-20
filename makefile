@@ -1,4 +1,4 @@
--o run DNFconverter.o
+run : DNFconverter.o
+	gcc -o run DNFconverter.o
 DNFconverter.o : DNFconverter.c
 	gcc -c -o DNFconverter.o DNFconverter.c
-
